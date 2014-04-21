@@ -11,6 +11,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'rails_12factor'
 gem 'twilio-ruby'
+gem 'dotenv-rails'
 
 group :development do
   gem 'better_errors'
@@ -23,7 +24,8 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl_rails'
-
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :test do
