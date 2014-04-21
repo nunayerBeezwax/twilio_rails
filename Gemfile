@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'rails_12factor'
 gem 'twilio-ruby'
 gem 'dotenv-rails'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
