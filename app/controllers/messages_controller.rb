@@ -3,6 +3,15 @@ class MessagesController < ApplicationController
     @message =Message.new
   end
 
+  def new
+    respond_to do |f|
+      f.html
+      f.js { @message = Message.new
+            @to = params[:number]
+          }
+    end
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.save

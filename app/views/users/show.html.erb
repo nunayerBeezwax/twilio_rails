@@ -1,0 +1,22 @@
+<%= current_user.email %>
+
+<%= form_for @contact do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit %>
+<% end %>
+  <ul>
+  </br>
+    <p> Click a number to send a text </p>
+  <% current_user.contacts.each do |contact| %>
+    <li><%= contact.name %></li>
+    <ul>
+      <li><%= link_to "#{contact.number}", new_message_path(number: contact.number), remote: :true %></li>
+    <ul>
+      <div class="message">
+      </div>
+  <% end %>
+  </ul>
