@@ -1,3 +1,11 @@
 $('.message').append(
   "<%=  j render 'form' %>"
+  + "<button id='addNum'> Add a number</button>"
   )
+$(function(){
+  var numberAmount = 1;
+  $('#addNum').click(function(){
+    numberAmount +=1
+    $('li').last().append("</br><p>additional num:</p><input type='text' id="+ numberAmount +" form='new_message' name=message[num_"+ numberAmount +"]></input>")
+  });
+});

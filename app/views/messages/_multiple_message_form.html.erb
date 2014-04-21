@@ -1,0 +1,13 @@
+
+<%= form_tag do |f| %>
+  <%= f.label :to %>
+  <%= f.text_field :to, value: @to %>
+  <br>
+  <%= f.label :from %>
+  <%= f.text_field :from %>
+  <br>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit %>
+<% end %>

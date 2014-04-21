@@ -25,10 +25,10 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl_rails'
-  gem 'vcr'
-  gem 'webmock'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'vcr'
+  gem 'webmock'
 end

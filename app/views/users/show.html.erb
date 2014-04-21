@@ -11,6 +11,7 @@
   <ul>
   </br>
     <p> Click a number to send a text </p>
+
   <% current_user.contacts.each do |contact| %>
     <li><%= contact.name %></li>
     <ul>
@@ -19,4 +20,5 @@
       <div class="message">
       </div>
   <% end %>
+
   </ul>

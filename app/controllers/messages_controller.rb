@@ -13,18 +13,13 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
-    if @message.save
-      flash[:notice] = "Sent!"
-      redirect_to root_path
-    else
-      render '/'
-    end
+   Message.multi_send(message_params)
+   redirect_to :back
   end
 
-  private
+private
   def message_params
-    params.require(:message).permit(:to, :from, :body)
+    params.require(:message).permit(:to, :from, :body, :num_2, :num_3, :num_4)
   end
 
 
